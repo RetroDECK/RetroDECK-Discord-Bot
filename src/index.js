@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { Client, GatewayIntentBits, Events } = require('discord.js');
 const { handleCommand, handleModal, MODAL_ID } = require('./commands/claim-donation');
 const { getAccessToken, TOKEN_PATH } = require('./services/token-store');

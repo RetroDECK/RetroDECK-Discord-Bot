@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const { REST, Routes } = require('discord.js');
 const { command } = require('./commands/claim-donation');
 
