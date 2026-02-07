@@ -1,0 +1,14 @@
+{
+  "name": "retrodeck-donation-bot",
+  "version": "1.0.0",
+  "description": "Discord bot that assigns a Donator role to verified OpenCollective donors",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy-commands": "node src/deploy-commands.js",
+    "setup-oauth": "node src/setup-oauth.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3"
+  }
+}

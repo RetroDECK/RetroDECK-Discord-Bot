@@ -1,0 +1,8 @@
+services:
+  donation-bot:
+    build: .
+    container_name: retrodeck-donation-bot
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
