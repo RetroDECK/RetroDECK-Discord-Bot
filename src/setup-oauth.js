@@ -70,8 +70,8 @@ const server = http.createServer(async (req, res) => {
 
     const tokenResponse = await fetch('https://opencollective.com/oauth/token', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
         grant_type: 'authorization_code',
         client_id: CLIENT_ID,
         client_secret: CLIENT_SECRET,
