@@ -9,7 +9,8 @@
     "setup-oauth": "node src/setup-oauth.js"
   },
   "dependencies": {
-    "discord.js": "^14.16.3"
+    "discord.js": "^14.16.3",
+    "dotenv": "^17.2.4"
   },
   "overrides": {
     "undici": "^6.23.0"
