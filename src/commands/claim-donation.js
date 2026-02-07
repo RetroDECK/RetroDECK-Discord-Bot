@@ -12,7 +12,7 @@ const EMAIL_INPUT_ID = 'email-input';
 
 const command = new SlashCommandBuilder()
   .setName('claim-donation')
-  .setDescription('Claim your Donator role by verifying your OpenCollective donation');
+  .setDescription('Claim your Supporter role by verifying your OpenCollective donation');
 
 async function handleCommand(interaction) {
   const modal = new ModalBuilder()
@@ -37,7 +37,7 @@ async function handleModal(interaction) {
 
   if (member.roles.cache.has(donatorRoleId)) {
     await interaction.reply({
-      content: 'You already have the Donator role! Thank you for your support.',
+      content: 'You already have the Supporter role! Thank you for your support.',
       flags: 64,
     });
     return;
@@ -54,7 +54,7 @@ async function handleModal(interaction) {
       await member.roles.add(donatorRoleId);
       await interaction.editReply({
         content:
-          'Donation verified! You have been given the **Donator** role. Thank you for supporting RetroDECK!',
+          'Donation verified! You have been given the **Supporter** role. Thank you for supporting RetroDECK!',
       });
     } else {
       await interaction.editReply({
